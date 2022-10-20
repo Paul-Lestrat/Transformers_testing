@@ -240,4 +240,4 @@ if __name__ == "__main__":
         device
     )
     out = model(x, trg)
-    print(out.cpu().detach().numpy())
+    print(out.shape)

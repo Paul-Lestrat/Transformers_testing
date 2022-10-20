@@ -241,4 +241,6 @@ if __name__ == "__main__":
         device
     )
     out = model(x, trg)
-    print(out.shape)
+    prediction = torch.softmax(out[:, -1, :], dim=1)
+    print(prediction.cpu().detach().numpy())
+    

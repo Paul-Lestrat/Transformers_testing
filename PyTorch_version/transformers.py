@@ -228,6 +228,7 @@ class Transformer(nn.Module):
 if __name__ == "__main__":
     # simple test sample
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(device)
 
     x = torch.tensor([[1, 5, 6, 4, 3], [1, 8, 7, 3, 4]]).to(device)
     trg = torch.tensor([[1, 7, 4, 3], [1, 5, 6, 2]]).to(device)
